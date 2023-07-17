@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
  
 class Bureaux extends Model
 {
+    protected $table = 'bureaux';
  
     /**
      * The attributes that are mass assignable.

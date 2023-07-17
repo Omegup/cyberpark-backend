@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('login', [AuthController::class,'login']);
 Route::post('register', [AuthController::class,'register']);
-Route::get('offices', [AuthController::class,'index']);
+Route::get('offices', [BureauxController::class,'index']);
 Route::get('office/{id}', [BureauxController::class,'show']);
 
 Route::group(['middleware'=>'api'],function(){
