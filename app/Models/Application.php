@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Models;
- 
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
- 
-class Bureaux extends Model
+
+class Application extends Model
 {
-    protected $table = 'bureaux';
+    protected $table = 'application';
  
     /**
      * The attributes that are mass assignable.
@@ -13,11 +15,9 @@ class Bureaux extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'NumBureau',
-         'etat',
-        'gérant',
-        'email',
-        'service',
-       
+        'from',
+        'phone',
+        'email', 
+        'description',
     ];
- }
+}

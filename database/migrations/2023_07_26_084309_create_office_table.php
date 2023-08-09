@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBureauxTable extends Migration
+class CreateOfficeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateBureauxTable extends Migration
      */
     public function up()
     {
-        Schema::create('bureaux', function (Blueprint $table) {
+        Schema::create('office', function (Blueprint $table) {
             $table->id();
             $table->string('NumBureau');
-            $table->string('etat');
+            $table->string('Etat');
             $table->string('Gerant');
             $table->string('Email')->unique();
             $table->string('Service');
@@ -31,6 +31,6 @@ class CreateBureauxTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bureaux');
+        Schema::dropIfExists('office');
     }
 }

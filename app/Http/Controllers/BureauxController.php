@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Bureaux;
+use App\Models\Office;
 
 class BureauxController extends Controller
 {
@@ -14,7 +14,7 @@ class BureauxController extends Controller
      */
     public function index()
     {
-        return Bureaux::all();
+        return Office::all();
     }
 
     /**
@@ -25,26 +25,26 @@ class BureauxController extends Controller
      */
     public function show($id)
     {
-        return Bureaux::findOrFail($id);
+        return Office::findOrFail($id);
     }
 
     public function store(Request $request)
     {
-        $bureau = Bureaux::create($request->all());
-        return response()->json($bureau, 201);
+        $office = Office::create($request->all());
+        return response()->json($office, 201);
     }
 
     public function update(Request $request, $id)
     {
-        $bureau = Bureaux::findOrFail($id);
-        $bureau->update($request->all());
+        $office = Office::findOrFail($id);
+        $office->update($request->all());
 
-        return response()->json($bureau, 200);
+        return response()->json($office, 200);
     }
 
     public function destroy($id)
     {
-        Bureaux::destroy($id);
+        Office::destroy($id);
 
         return response()->json(null, 204);
     }
