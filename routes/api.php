@@ -40,3 +40,6 @@ Route::group(['middleware'=>'api'],function(){
     Route::put('request/{id}', [ReqqController::class, 'update']);
     Route::delete('requests/{id}', [ReqqController::class, 'destroy']);
 });
+
+
+////comittt 2
