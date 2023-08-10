@@ -34,7 +34,7 @@ Route::group(['middleware'=>'api'],function(){
     Route::post('refresh', [AuthController::class,'refresh']);
     Route::post('me', [AuthController::class,'me']);
     Route::post('offices', [BureauxController::class, 'store']);
-    Route::put('offices/{id}', [BureauxController::class, 'update']);
+    Route::get('offices/up/{id}', [BureauxController::class, 'update']);
     Route::delete('offices/{id}', [BureauxController::class, 'destroy']);
     Route::post('requests', [ReqqController::class, 'store']);
     Route::put('request/{id}', [ReqqController::class, 'update']);
